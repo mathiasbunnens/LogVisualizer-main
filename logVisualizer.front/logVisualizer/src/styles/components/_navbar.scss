@@ -1,0 +1,115 @@
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  .nav-title {
+    font-variant: small-caps;
+    font-size: clamp(1.5rem, calc(1.5rem + 2vw), 3vw);
+  }
+
+  .dark-light {
+    position: relative;
+    height: 4vh;
+    background-color: $color-green;
+    width: 8vh;
+    height: 4vh;
+    border-radius: 4vh;
+    transition: 0.5s ease-in-out;
+
+    input {
+      appearance: none;
+      display: block;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+      position: absolute;
+      width: 8vh;
+      height: 4vh;
+      margin: 0;
+      z-index: 2;
+
+      /* &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $color-blue-light;
+        width: 8vh;
+        height: 4vh;
+        border-radius: 4vh;
+        transition: 0.5s ease-in-out;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $color-black-op;
+        width: 4vh;
+        height: 4vh;
+        border-radius: 4vh;
+        transition: 0.5s ease-in-out;
+      } */
+    }
+
+    .sun-moon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $color-green-light;
+      width: 4vh;
+      height: 4vh;
+      border-radius: 4vh;
+      transition: 0.5s ease-in-out;
+
+      img {
+        width: calc(4vh - 6px);
+        height: calc(4vh - 6px);
+        padding: 3px;
+        position: absolute;
+      }
+
+      .sun {
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+
+      .moon {
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    .darkM-img {
+      background-color: $color-black-op;
+      right: 4vh;
+    }
+  }
+
+  .dark-light-switch {
+    background-color: $color-blue-light;
+
+    .sun-moon {
+      .sun {
+        opacity: 0;
+      }
+
+      .moon {
+        opacity: 1;
+      }
+    }
+
+    /* &::before {
+      background-color: $color-green;
+    }
+
+    &::after {
+      background-color: $color-green-light;
+      right: 4vh;
+    } */
+  }
+}

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+$color-blue: #223240;
+$color-blue-light: hsl(208, 31%, 82%);
+$color-green: #3b8c66;
+$color-green-dark: #347355;
+$color-green-light: #60bf81;
+$color-green-light2: hsl(141, 33%, 80%);
+$color-green-yellow: #93d94e;
+
+$color-green-op: hsla(152, 41%, 39%, 0.3);
+$color-black-op: rgba(0, 0, 0, 0.1);
+
+body {
+  margin: 0;
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-green-light2;
+  transition: 0.5s ease-in-out;
+}
+
+.darkMode-body {
+  background-color: $color-blue;
+}
+
+h1,
+h2,
+.nav-title {
+  color: $color-green;
+}
+
+.nav-title {
+  transition: 0.5s ease-in-out;
+}
+
+.title-darkM {
+  color: $color-blue-light;
+}
+
+textarea {
+  resize: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  padding: 1rem;
+  font-family: "Jost";
+  font-size: 1rem;
+  cursor: text;
+  transition: 0.2s ease-in-out;
+
+  &::placeholder {
+    color: #223240b6;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+button {
+  font-family: "Jost";
+  padding: 1rem 0.8rem;
+  border-radius: 0;
+  border: none;
+  font-variant: small-caps;
+  font-size: clamp(1rem, calc(1rem + 1vw), 2vw);
+  appearance: none;
+  transition: 0.5s ease-in-out;
+  background-color: $color-green-light;
+  /* color: $color-green-dark; */
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-darkM {
+  background-color: #223240;
+  color: $color-blue-light;
+}
+
+p {
+  margin: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.darkM-input {
+  color: $color-blue-light;
+}
+
+select {
+  background-color: $color-green-light2;
+  font-family: "Jost";
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  border: none;
+  /* font-size: clamp(1rem, calc(1rem + 1vw), 2vw); */
+  appearance: none;
+  height: 100%;
+  width: calc(4rem + 4vw);
+  transition: 0.5s ease-in-out;
+
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}

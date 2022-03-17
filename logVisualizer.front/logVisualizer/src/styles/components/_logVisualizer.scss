@@ -1,0 +1,143 @@
+.logVisualizer {
+  height: 90vh;
+  width: calc(100%);
+  background-color: hsla(0, 0%, 100%, 0.82);
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+
+  .filtre-log {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: $color-black-op; */
+    border-bottom: 3px solid $color-green;
+    transition: 0.5s ease-in-out;
+  }
+
+  .line-darkM {
+    border-bottom: 3px solid $color-blue-light;
+  }
+
+  .logs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    .paste-log {
+      height: 100%;
+      width: 50%;
+      position: relative;
+
+      textarea {
+        height: calc(100% - 8vh - 2rem);
+        width: calc(100% - 2rem);
+        padding-top: calc(8vh + 1rem);
+      }
+    }
+
+    .copy-log {
+      height: 100%;
+      width: 50%;
+      position: relative;
+
+      .result-log {
+        padding: 1rem;
+        overflow-wrap: break-word;
+      }
+
+      .select-area {
+        position: relative;
+        /* top: 0;
+        left: 0; */
+        height: 8vh;
+        width: calc(100% - 4rem);
+
+        span {
+          text-transform: uppercase;
+          transform: translateY(-50%);
+          font-size: 0.8rem;
+          position: absolute;
+          left: 1.5rem;
+          top: 0;
+          z-index: 2;
+          transition: 0.5s ease-in-out;
+        }
+
+        .select-log {
+          /* position: absolute; */
+          width: 100%;
+        }
+      }
+    }
+
+    .copyPaste-log-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 8vh;
+      min-width: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-green-op;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+
+      span {
+        font-size: 0.8rem;
+      }
+
+      img {
+        width: 1.2rem;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .BG-darkM {
+      background-color: hsla(208, 30%, 82%, 0.3);
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-green;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .line-after-darkM {
+    &::after {
+      background-color: $color-blue-light;
+    }
+  }
+
+  .run {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:hover {
+      transform: scale(1.05) translateX(-50%);
+    }
+  }
+}
+
+.darkM-logV {
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
